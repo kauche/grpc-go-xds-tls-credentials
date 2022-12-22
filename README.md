@@ -1,6 +1,6 @@
 # grpc-go-xds-tls-credentials
 
-`grpc-go-xds-tls-credentials` is a Go library that provides a TLS credentials used for connecting to the xDS management server.
+`grpc-go-xds-tls-credentials` is a Go library that provides a TLS credentials used for making a grpc-go client able to connect to a xDS control plane 🚀
 
 ## Usage
 
