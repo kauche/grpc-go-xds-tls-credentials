@@ -21,6 +21,6 @@ $ GRPC_XDS_BOOTSTRAP_CONFIG='{
     "channel_creds": [{"type": "default"}],
     "server_features": ["xds_v3"]
   }],
-  "node": {"id": "echocaller"}
+  "node": {"id": "..."}
 }' go run ./path/to/your/app
 ```
