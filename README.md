@@ -18,7 +18,7 @@ Then, make your grpc-go client use this `tls` channel_creds like below:
 $ GRPC_XDS_BOOTSTRAP_CONFIG='{
   "xds_servers": [{
     "server_uri": "...",
-    "channel_creds": [{"type": "default"}],
+    "channel_creds": [{"type": "tls"}],
     "server_features": ["xds_v3"]
   }],
   "node": {"id": "..."}
