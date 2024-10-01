@@ -1,6 +1,6 @@
 module github.com/kauche/grpc-go-xds-tls-credentials
 
-go 1.21
+go 1.22
 
 require google.golang.org/grpc v1.67.0
 
