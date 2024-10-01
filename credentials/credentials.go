@@ -26,11 +26,11 @@ type transportCredsBuilder struct {
 	serverNameOverride string
 }
 
-func (t *transportCredsBuilder) Build(config json.RawMessage) (credentials.Bundle, error) {
+func (t *transportCredsBuilder) Build(_ json.RawMessage) (credentials.Bundle, func(), error) {
 	return &tlsCredentalsBundle{
 		cp:                 t.cp,
 		serverNameOverride: t.serverNameOverride,
-	}, nil
+	}, func() {}, nil
 }
 
 func (t *transportCredsBuilder) Name() string {
