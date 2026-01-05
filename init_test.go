@@ -11,7 +11,7 @@ import (
 func TestInit(t *testing.T) {
 	t.Parallel()
 
-	c := bootstrap.GetCredentials("tls")
+	c := bootstrap.GetChannelCredentials("tls")
 
 	if c == nil {
 		t.Errorf("expected the credentials to be registered")
