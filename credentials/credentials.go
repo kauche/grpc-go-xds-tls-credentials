@@ -8,7 +8,7 @@ import (
 	"google.golang.org/grpc/xds/bootstrap"
 )
 
-var _ bootstrap.Credentials = (*transportCredsBuilder)(nil)
+var _ bootstrap.ChannelCredentials = (*transportCredsBuilder)(nil)
 
 // RegisterCredentials registers the TLS credentials used for connecting to the xds management server.
 // cp and serverNameOverride are used to create the TLS credentials.
@@ -18,7 +18,7 @@ func RegisterCredentials(cp *x509.CertPool, serverNameOverride string) {
 		serverNameOverride: serverNameOverride,
 	}
 
-	bootstrap.RegisterCredentials(builder)
+	bootstrap.RegisterChannelCredentials(builder)
 }
 
 type transportCredsBuilder struct {
